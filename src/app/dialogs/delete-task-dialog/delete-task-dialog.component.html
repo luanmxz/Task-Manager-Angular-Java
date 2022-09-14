@@ -1,0 +1,17 @@
+<div class="container">
+  <h2 mat-dialog-title>Deseja excluir essa tarefa?</h2>
+  <div class="buttons">
+    <button [mat-dialog-close]="true" class="cancel_button" type="button">
+      <i class="fa-solid fa-xmark fa-3x x_color"></i>
+    </button>
+    <button
+      [mat-dialog-close]="true"
+      cdkFocusInitial
+      class="update_button"
+      type="button"
+      (click)="deleteById()"
+    >
+      <i class="fa-solid fa-check fa-3x check_color"></i>
+    </button>
+  </div>
+</div>

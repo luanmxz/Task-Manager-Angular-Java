@@ -1,0 +1,28 @@
+<h1 class="page_completed-tasks_title">All Completed Tasks</h1>
+<div class="container_for_color_filter">
+  <button class="filter_study" type="button" (click)="filter('Estudo', true)"></button>
+  <button class="filter_work" type="button" (click)="filter('Trabalho', true)"></button>
+  <button class="filter_personal" type="button" (click)="filter('Pessoal', true)"></button>
+</div>
+<div class="all_tasks">
+  <div class="container" *ngFor="let completedTask of completedTasks">
+    <div class="card">
+      <h2 class="task_title">{{ completedTask.tarefa }}</h2>
+      <div class="options">
+        <button type="button" (click)="deleteDialog(completedTask)">
+          Excluir
+        </button>
+      </div>
+    </div>
+    <div
+      class="for_icon"
+      [class.for_icon_bg-work]="completedTask.categoria == 'Trabalho'"
+      [class.for_icon_bg-study]="completedTask.categoria == 'Estudo'"
+      [class.for_icon_bg-personal]="completedTask.categoria == 'Pessoal'"
+    >
+      <button type="button" (click)="detailsDialog(completedTask)">
+        <i class="fa-solid fa-angle-right fa-3x"></i>
+      </button>
+    </div>
+  </div>
+</div>

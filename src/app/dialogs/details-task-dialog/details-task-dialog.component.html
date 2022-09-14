@@ -1,0 +1,16 @@
+
+  <button class="back_button fa-2x" type="button" [mat-dialog-close]="true">
+    <i class="fa-solid fa-circle-arrow-left"></i>
+  </button>
+  <h2>Detalhes</h2>
+
+
+<section class="detalhes">
+  <p><span>Categoria:</span> {{ data.categoria }}</p>
+  <p><span>Tarefa:</span> {{ data.tarefa }}</p>
+  <p *ngIf="data.detalhes"><span>Detalhes:</span> {{ data.detalhes }}</p>
+  <p *ngIf="!data.status"><span>Status:</span> Em andamento</p>
+  <p *ngIf="data.status"><span>Status:</span> Concluído</p>
+  <p *ngIf="!data.status"><span>Prazo para conclusão:</span> {{ data.prazo | date: "dd/MM/yy" }}</p>
+  <p *ngIf="data.status"><span>Concluído em:</span> {{ data.prazo | date: "dd/MM/yy" }}</p>
+</section>

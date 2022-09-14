@@ -1,0 +1,29 @@
+nav {
+  width: min-content;
+  height: 100%;
+  background: linear-gradient(10deg, var(--color-main-2) 0%, rgba(15,52,96,1) 50%, var(--color-blue) 59%, rgb(19, 76, 146) 100%);
+  padding: 1rem;
+  display: flex;
+  border-right: 2px solid var(--color-white);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+.onHover {
+  transition: 0.3s ease-out;
+  color: var(--color-white);
+}
+.onHover:hover {
+  transform: scale(1.6);
+}

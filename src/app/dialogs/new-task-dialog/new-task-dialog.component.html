@@ -1,0 +1,82 @@
+<!-- FORMULÁRIO PARA ADICIONAR UMA TASK -->
+<h2>Nova tarefa</h2>
+
+<form [formGroup]="saveForm" (ngSubmit)="save(saveForm.value)">
+  <!-- select da categoria da task -->
+  <mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>Categoria</mat-label>
+      <mat-select formControlName="categoria">
+        <mat-option *ngFor="let cat of categorias" [value]="cat">
+          {{ cat }}
+        </mat-option>
+      </mat-select>
+  </mat-form-field>
+
+  <!-- Input da tarefa da task -->
+  <mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>Tarefa</mat-label>
+    <input matInput type="text" formControlName="tarefa" maxlength="40" />
+    <button
+      class="close_button"
+      *ngIf="saveForm.get('tarefa')?.value"
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      (click)="saveForm.controls['tarefa'].reset()"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+    <span
+      class="text-muted"
+      *ngIf="
+        saveForm.get('tarefa')?.hasError('required') &&
+        saveForm.get('tarefa')?.touched
+      "
+      >Campo obrigatório.</span
+    >
+  </mat-form-field>
+
+  <!-- Input dos detalhes da task -->
+  <mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>Detalhes</mat-label>
+    <textarea
+      matInput
+      type="text"
+      formControlName="detalhes"
+      maxlength="255"
+    ></textarea>
+  </mat-form-field>
+
+  <!-- Input do prazo da task -->
+  <mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>Prazo</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="prazo" />
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="picker">
+      <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+    </mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <span
+      class="text-muted"
+      *ngIf="
+        saveForm.get('prazo')?.hasError('required') &&
+        saveForm.get('prazo')?.touched
+      "
+      >Campo obrigatório.</span
+    >
+  </mat-form-field>
+  <div class="buttons">
+    <button class="back_button fa-3x back_button" type="button" [mat-dialog-close]="true">
+      <i class="fa-solid fa-circle-arrow-left"></i>
+    </button>
+    <button
+      [disabled]="!saveForm.valid"
+      [mat-dialog-close]="true"
+      cdkFocusInitial
+      class="update_button"
+      type="submit"
+    >
+      Salvar
+    </button>
+  </div>
+</form>

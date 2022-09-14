@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.close_button {
+  border-radius: 1rem;
+  border-style: none;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.update_button,
+.cancel_button {
+  width: 15%;
+  height: 3rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.x_color {
+  color: var(--color-red);
+}
+
+.check_color {
+  color: var(--color-green);
+}

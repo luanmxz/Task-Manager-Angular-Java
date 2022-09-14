@@ -1,1 +1,73 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+:root{
+  --color-main-1:#E94560;
+  --color-main-2: rgb(15, 48, 90);
+  --color-red: red;
+  --color-green: green;
+  --color-blue: rgb(16, 53, 99);
+  --color-white: #e8f9fd;
+  --color-card-shadow-1: #ba233d;
+  --bg-study: linear-gradient(0deg, rgba(19,97,80,1) 0%, rgba(25,152,112,1) 49%, rgba(44,198,152,1) 100%);
+  --bg-personal: linear-gradient(0deg, rgba(89,25,117,1) 0%, rgba(123,26,162,1) 48%, rgba(175,45,214,1) 100%);
+  --bg-work: linear-gradient(0deg, rgba(196,77,53,1) 0%, rgba(222,111,20,1) 48%, rgba(244,152,39,1) 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+app-navbar{
+  height: 100%;
+}
+
+app-tasks {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  padding: 1.2rem;
+  padding-bottom: 5rem;
+  padding-top: 3rem;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  overscroll-behavior-y: auto;
+}
+
+app-completed-tasks{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  padding: 1.2rem;
+  padding-bottom: 5rem;
+  padding-top: 3rem;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  overscroll-behavior-y: auto;
+}
+
+app-new-task {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+html,
+body {
+  background-color: var(--color-main-1);
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

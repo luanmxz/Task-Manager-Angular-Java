@@ -1,0 +1,84 @@
+{
+  "tasks": [
+    {
+      "categoria": "Pessoal",
+      "tarefa": "Terminar front",
+      "detalhes": "",
+      "status": true,
+      "prazo": "2022-09-04T01:21:14.161Z",
+      "id": 4
+    },
+    {
+      "categoria": "Pessoal",
+      "tarefa": "Terminar front",
+      "detalhes": "",
+      "status": true,
+      "prazo": "2022-09-04T01:21:14.161Z",
+      "id": 5
+    },
+    {
+      "categoria": "Estudo",
+      "tarefa": "Estudo",
+      "detalhes": "Sem detalhes",
+      "status": true,
+      "prazo": "2022-09-07T01:21:10.242Z",
+      "id": 6
+    },
+    {
+      "categoria": "Estudo",
+      "tarefa": "Tarefa de estudo",
+      "detalhes": "",
+      "status": false,
+      "prazo": "2022-09-14T06:24:04.386Z",
+      "id": 14
+    },
+    {
+      "categoria": "Trabalho",
+      "tarefa": "Tarefa do trabalho",
+      "detalhes": "",
+      "status": false,
+      "prazo": "2022-09-09T02:28:03.944Z",
+      "id": 17
+    },
+    {
+      "categoria": "Pessoal",
+      "tarefa": "Tarefa Pessoal",
+      "detalhes": "",
+      "status": false,
+      "prazo": "2022-09-09T02:27:53.211Z",
+      "id": 18
+    },
+    {
+      "categoria": "Estudo",
+      "tarefa": "Completada ",
+      "detalhes": "",
+      "status": true,
+      "prazo": "2022-09-09T02:31:48.167Z",
+      "id": 19
+    },
+    {
+      "categoria": "Estudo",
+      "tarefa": "teste",
+      "detalhes": "",
+      "status": true,
+      "prazo": "2022-09-10T00:25:50.057Z",
+      "id": 23
+    },
+    {
+      "categoria": "Trabalho",
+      "tarefa": "Teste01",
+      "detalhes": "",
+      "status": false,
+      "prazo": "2022-09-14T06:19:19.504Z",
+      "id": 24
+    },
+    {
+      "categoria": "Pessoal",
+      "tarefa": "Teste02",
+      "detalhes": "",
+      "status": false,
+      "prazo": "2022-09-14T06:19:32.572Z",
+      "id": 25
+    }
+  ]
+}
